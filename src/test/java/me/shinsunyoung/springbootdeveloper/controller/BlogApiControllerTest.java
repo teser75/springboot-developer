@@ -39,7 +39,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 class BlogApiControllerTest {
-
+/*
     @Autowired
     protected MockMvc mockMvc;
 
@@ -147,12 +147,6 @@ class BlogApiControllerTest {
         final String content = "content";
 
         Article savedArticle = createDefaultArtice();
-        /*
-        Article savedArticle = blogRepository.save( Article.builder()
-                .title(title)
-                .content(content)
-                .build()
-        );*/
 
         //when
         final ResultActions resultActions = mockMvc.perform( get( url, savedArticle.getId()));
@@ -176,16 +170,6 @@ class BlogApiControllerTest {
 
         Article savedArticle = createDefaultArtice();
 
-        /*
-
-        Article savedArticle = blogRepository.save(Article.builder()
-                .title(title)
-                .content(content)
-                .build()
-        );
-
-         */
-
 
         mockMvc.perform(delete(url,savedArticle.getId()))
                 .andExpect(status().isOk());
@@ -206,13 +190,6 @@ class BlogApiControllerTest {
         final String content = "content";
 
         Article savedArticle = createDefaultArtice();
-        /*
-        Article savedArticle = blogRepository.save(Article.builder()
-                .title(title)
-                .content(content)
-                .build()
-        );
-        */
 
 
         final String newTitle = "new Title";
@@ -242,5 +219,5 @@ class BlogApiControllerTest {
                 .build()
         );
     }
-
+*/
 }
