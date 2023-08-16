@@ -29,5 +29,12 @@
       <jdbc-url>jdbc:mariadb://localhost:3306/blog</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="@awseb-e-b8up5ih5vp-stack-awsebrdsdatabase-ifvd4u0zwhdd.cgynjqfcslv3.ap-northeast-2.rds.amazonaws.com" uuid="0ef10064-bace-4454-aaef-435aff99f03d">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://awseb-e-b8up5ih5vp-stack-awsebrdsdatabase-ifvd4u0zwhdd.cgynjqfcslv3.ap-northeast-2.rds.amazonaws.com:3306/</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
