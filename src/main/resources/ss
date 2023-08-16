@@ -1,0 +1,236 @@
+----------------------------------------
+/var/log/web.stdout.log
+----------------------------------------
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-10.1.5.jar!/:na]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:926) ~[tomcat-embed-core-10.1.5.jar!/:na]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) ~[tomcat-embed-core-10.1.5.jar!/:na]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.apache.catalina.startup.Tomcat.start(Tomcat.java:485) ~[tomcat-embed-core-10.1.5.jar!/:na]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123) ~[spring-boot-3.0.2.jar!/:3.0.2]
+Aug 16 07:29:03 ip-172-31-14-24 web: ... 21 common frames omitted
+Aug 16 07:29:03 ip-172-31-14-24 web: Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'OAuth2UserCustomService' defined in URL [jar:file:/var/app/current/application.jar!/BOOT-INF/classes!/me/shinsunyoung/springbootdeveloper/config/oauth/OAuth2UserCustomService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in me.shinsunyoung.springbootdeveloper.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:245) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1344) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1188) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: ... 71 common frames omitted
+Aug 16 07:29:03 ip-172-31-14-24 web: Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository' defined in me.shinsunyoung.springbootdeveloper.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1663) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1412) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:598) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1405) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1325) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: ... 85 common frames omitted
+Aug 16 07:29:03 ip-172-31-14-24 web: Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jpaSharedEM_entityManagerFactory': Cannot resolve reference to bean 'entityManagerFactory' while setting constructor argument
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:691) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:515) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1324) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1161) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: ... 99 common frames omitted
+Aug 16 07:29:03 ip-172-31-14-24 web: Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1751) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: ... 111 common frames omitted
+Aug 16 07:29:03 ip-172-31-14-24 web: Caused by: org.hibernate.service.spi.ServiceException: Unable to create requested service [org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:267) ~[hibernate-core-6.1.6.Final.jar!/:6.1.6.Final]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:230) ~[hibernate-core-6.1.6.Final.jar!/:6.1.6.Final]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:207) ~[hibernate-core-6.1.6.Final.jar!/:6.1.6.Final]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.hibernate.boot.model.relational.Database.<init>(Database.java:44) ~[hibernate-core-6.1.6.Final.jar!/:6.1.6.Final]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:218) ~[hibernate-core-6.1.6.Final.jar!/:6.1.6.Final]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:191) ~[hibernate-core-6.1.6.Final.jar!/:6.1.6.Final]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:138) ~[hibernate-core-6.1.6.Final.jar!/:6.1.6.Final]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1350) ~[hibernate-core-6.1.6.Final.jar!/:6.1.6.Final]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1421) ~[hibernate-core-6.1.6.Final.jar!/:6.1.6.Final]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:376) ~[spring-orm-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:352) ~[spring-orm-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1797) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1747) ~[spring-beans-6.0.4.jar!/:6.0.4]
+Aug 16 07:29:03 ip-172-31-14-24 web: ... 118 common frames omitted
+Aug 16 07:29:03 ip-172-31-14-24 web: Caused by: org.hibernate.HibernateException: Unable to determine Dialect without JDBC metadata (please set 'javax.persistence.jdbc.url', 'hibernate.connection.url', or 'hibernate.dialect')
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.determineDialect(DialectFactoryImpl.java:147) ~[hibernate-core-6.1.6.Final.jar!/:6.1.6.Final]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.hibernate.engine.jdbc.dialect.internal.DialectFactoryImpl.buildDialect(DialectFactoryImpl.java:60) ~[hibernate-core-6.1.6.Final.jar!/:6.1.6.Final]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:244) ~[hibernate-core-6.1.6.Final.jar!/:6.1.6.Final]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:36) ~[hibernate-core-6.1.6.Final.jar!/:6.1.6.Final]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:119) ~[hibernate-core-6.1.6.Final.jar!/:6.1.6.Final]
+Aug 16 07:29:03 ip-172-31-14-24 web: at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:255) ~[hibernate-core-6.1.6.Final.jar!/:6.1.6.Final]
+Aug 16 07:29:03 ip-172-31-14-24 web: ... 133 common frames omitted
+Aug 16 07:29:06 ip-172-31-14-24 web: .   ____          _            __ _ _
+Aug 16 07:29:06 ip-172-31-14-24 web: /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+Aug 16 07:29:06 ip-172-31-14-24 web: ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+Aug 16 07:29:06 ip-172-31-14-24 web: \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+Aug 16 07:29:06 ip-172-31-14-24 web: '  |____| .__|_| |_|_| |_\__, | / / / /
+Aug 16 07:29:06 ip-172-31-14-24 web: =========|_|==============|___/=/_/_/_/
+Aug 16 07:29:06 ip-172-31-14-24 web: :: Spring Boot ::                (v3.0.2)
+Aug 16 07:29:06 ip-172-31-14-24 web: 2023-08-16T07:29:06.375Z  INFO 4394 --- [           main] m.s.s.SpringBootDeveloperApplication     : Starting SpringBootDeveloperApplication using Java 17.0.8 with PID 4394 (/var/app/current/application.jar started by webapp in /var/app/current)
+Aug 16 07:29:06 ip-172-31-14-24 web: 2023-08-16T07:29:06.387Z  INFO 4394 --- [           main] m.s.s.SpringBootDeveloperApplication     : No active profile set, falling back to 1 default profile: "default"
+
+
+----------------------------------------
+/var/log/eb-engine.log
+----------------------------------------
+2023/08/16 07:27:47.731178 [INFO] Executing instruction: CleanEbExtensions
+2023/08/16 07:27:47.731199 [INFO] Cleaned ebextensions subdirectories from app staging directory.
+2023/08/16 07:27:47.731210 [INFO] Executing instruction: RunAppDeployPreDeployHooks
+2023/08/16 07:27:47.731237 [INFO] Running command /bin/sh -c uname -m
+2023/08/16 07:27:47.733237 [INFO] x86_64
+
+2023/08/16 07:27:47.733263 [INFO] Executing platform hooks in .platform/hooks/predeploy/
+2023/08/16 07:27:47.733289 [INFO] The dir .platform/hooks/predeploy/ does not exist
+2023/08/16 07:27:47.733292 [INFO] Finished running scripts in /var/app/staging/.platform/hooks/predeploy
+2023/08/16 07:27:47.733298 [INFO] Executing instruction: stop X-Ray
+2023/08/16 07:27:47.733302 [INFO] stop X-Ray ...
+2023/08/16 07:27:47.733313 [INFO] Running command /bin/sh -c systemctl show -p PartOf xray.service
+2023/08/16 07:27:47.739714 [WARN] stopProcess Warning: process xray is not registered
+2023/08/16 07:27:47.739738 [INFO] Running command /bin/sh -c systemctl stop xray.service
+2023/08/16 07:27:47.749982 [INFO] Executing instruction: stop proxy
+2023/08/16 07:27:47.750010 [INFO] Running command /bin/sh -c systemctl show -p PartOf httpd.service
+2023/08/16 07:27:47.757376 [WARN] deregisterProcess Warning: process httpd is not registered, skipping...
+
+2023/08/16 07:27:47.757401 [INFO] Running command /bin/sh -c systemctl show -p PartOf nginx.service
+2023/08/16 07:27:47.765012 [WARN] deregisterProcess Warning: process nginx is not registered, skipping...
+
+2023/08/16 07:27:47.765030 [INFO] Executing instruction: FlipApplication
+2023/08/16 07:27:47.765033 [INFO] Fetching environment variables...
+2023/08/16 07:27:47.765053 [INFO] Running command /bin/sh -c uname -m
+2023/08/16 07:27:47.766545 [INFO] x86_64
+
+2023/08/16 07:27:47.766648 [INFO] Purge old process...
+2023/08/16 07:27:47.766659 [INFO] Removing /var/app/current/ if it exists
+2023/08/16 07:27:47.766666 [INFO] Renaming /var/app/staging/ to /var/app/current/
+2023/08/16 07:27:47.766678 [INFO] Register application processes...
+2023/08/16 07:27:47.766682 [INFO] Registering the proc: web
+
+2023/08/16 07:27:47.766691 [INFO] Running command /bin/sh -c systemctl show -p PartOf web.service
+2023/08/16 07:27:47.775142 [INFO] Running command /bin/sh -c systemctl daemon-reload
+2023/08/16 07:27:47.870145 [INFO] Running command /bin/sh -c systemctl reset-failed
+2023/08/16 07:27:47.875336 [INFO] Running command /bin/sh -c systemctl is-enabled eb-app.target
+2023/08/16 07:27:47.883389 [INFO] Copying file /opt/elasticbeanstalk/config/private/aws-eb.target to /etc/systemd/system/eb-app.target
+2023/08/16 07:27:47.888611 [INFO] Running command /bin/sh -c systemctl enable eb-app.target
+2023/08/16 07:27:47.996559 [INFO] Created symlink from /etc/systemd/system/multi-user.target.wants/eb-app.target to /etc/systemd/system/eb-app.target.
+
+2023/08/16 07:27:47.996595 [INFO] Running command /bin/sh -c systemctl start eb-app.target
+2023/08/16 07:27:48.005260 [INFO] Running command /bin/sh -c systemctl enable web.service
+2023/08/16 07:27:48.108809 [INFO] Created symlink from /etc/systemd/system/multi-user.target.wants/web.service to /etc/systemd/system/web.service.
+
+2023/08/16 07:27:48.108871 [INFO] Running command /bin/sh -c systemctl show -p PartOf web.service
+2023/08/16 07:27:48.114259 [INFO] Running command /bin/sh -c systemctl is-active web.service
+2023/08/16 07:27:48.117470 [INFO] Running command /bin/sh -c systemctl start web.service
+2023/08/16 07:27:48.131104 [INFO] Executing instruction: start X-Ray
+2023/08/16 07:27:48.131123 [INFO] X-Ray is not enabled.
+2023/08/16 07:27:48.131128 [INFO] Executing instruction: start proxy with new configuration
+2023/08/16 07:27:48.131152 [INFO] Running command /bin/sh -c /usr/sbin/nginx -t -c /var/proxy/staging/nginx/nginx.conf
+2023/08/16 07:27:48.199371 [INFO] nginx: the configuration file /var/proxy/staging/nginx/nginx.conf syntax is ok
+nginx: configuration file /var/proxy/staging/nginx/nginx.conf test is successful
+
+2023/08/16 07:27:48.199432 [INFO] Running command /bin/sh -c cp -rp /var/proxy/staging/nginx/* /etc/nginx
+2023/08/16 07:27:48.208242 [INFO] Running command /bin/sh -c systemctl show -p PartOf nginx.service
+2023/08/16 07:27:48.225006 [INFO] Running command /bin/sh -c systemctl daemon-reload
+2023/08/16 07:27:48.314749 [INFO] Running command /bin/sh -c systemctl reset-failed
+2023/08/16 07:27:48.318964 [INFO] Running command /bin/sh -c systemctl show -p PartOf nginx.service
+2023/08/16 07:27:48.323782 [INFO] Running command /bin/sh -c systemctl is-active nginx.service
+2023/08/16 07:27:48.327495 [INFO] Running command /bin/sh -c systemctl start nginx.service
+2023/08/16 07:27:48.395821 [INFO] Executing instruction: configureSqsd
+2023/08/16 07:27:48.395836 [INFO] This is a web server environment instance, skip configure sqsd daemon ...
+2023/08/16 07:27:48.395842 [INFO] Executing instruction: startSqsd
+2023/08/16 07:27:48.395846 [INFO] This is a web server environment instance, skip start sqsd daemon ...
+2023/08/16 07:27:48.395850 [INFO] Executing instruction: Track pids in healthd
+2023/08/16 07:27:48.395853 [INFO] This is an enhanced health env...
+2023/08/16 07:27:48.395867 [INFO] Running command /bin/sh -c systemctl show -p ConsistsOf aws-eb.target | cut -d= -f2
+2023/08/16 07:27:48.401921 [INFO] cfn-hup.service nginx.service healthd.service
+
+2023/08/16 07:27:48.401952 [INFO] Running command /bin/sh -c systemctl show -p ConsistsOf eb-app.target | cut -d= -f2
+2023/08/16 07:27:48.407060 [INFO] web.service
+
+2023/08/16 07:27:48.407260 [INFO] Executing instruction: RunAppDeployPostDeployHooks
+2023/08/16 07:27:48.407283 [INFO] Running command /bin/sh -c uname -m
+2023/08/16 07:27:48.409201 [INFO] x86_64
+
+2023/08/16 07:27:48.409223 [INFO] Executing platform hooks in .platform/hooks/postdeploy/
+2023/08/16 07:27:48.409253 [INFO] The dir .platform/hooks/postdeploy/ does not exist
+2023/08/16 07:27:48.409257 [INFO] Finished running scripts in /var/app/current/.platform/hooks/postdeploy
+2023/08/16 07:27:48.409264 [INFO] Executing cleanup logic
+2023/08/16 07:27:48.409382 [INFO] CommandService Response: {"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"Engine execution has succeeded.","returncode":0,"events":[{"msg":"Instance deployment successfully detected a JAR file in your source bundle.","timestamp":1692170865740,"severity":"INFO"},{"msg":"Instance deployment successfully generated a 'Procfile'.","timestamp":1692170866089,"severity":"INFO"},{"msg":"Instance deployment completed successfully.","timestamp":1692170868409,"severity":"INFO"}]}]}
+
+2023/08/16 07:27:48.409598 [INFO] Platform Engine finished execution on command: app-deploy
+
+2023/08/16 07:29:05.897942 [INFO] Starting...
+2023/08/16 07:29:05.897996 [INFO] Starting EBPlatform-PlatformEngine
+2023/08/16 07:29:05.898033 [INFO] reading event message file
+2023/08/16 07:29:05.898210 [INFO] Engine received EB command cfn-hup-exec
+
+2023/08/16 07:29:06.002666 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:ap-northeast-2:748992211851:stack/awseb-e-bijnanmkum-stack/34a18e10-3c05-11ee-be81-02b9aedf49ee -r AWSEBAutoScalingGroup --region ap-northeast-2
+2023/08/16 07:29:06.899667 [INFO] Running command /bin/sh -c /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:ap-northeast-2:748992211851:stack/awseb-e-bijnanmkum-stack/34a18e10-3c05-11ee-be81-02b9aedf49ee -r AWSEBBeanstalkMetadata --region ap-northeast-2
+2023/08/16 07:29:07.688160 [INFO] checking whether command tail-log is applicable to this instance...
+2023/08/16 07:29:07.688173 [INFO] this command is applicable to the instance, thus instance should execute command
+2023/08/16 07:29:07.688177 [INFO] Engine command: (tail-log)
+
+2023/08/16 07:29:07.688234 [INFO] Executing instruction: GetTailLogs
+2023/08/16 07:29:07.688238 [INFO] Tail Logs...
+2023/08/16 07:29:07.688515 [INFO] Running command /bin/sh -c tail -n 100 /var/log/web.stdout.log
+2023/08/16 07:29:07.717271 [INFO] Running command /bin/sh -c tail -n 100 /var/log/eb-engine.log
+
+
+----------------------------------------
+/var/log/eb-hooks.log
+----------------------------------------
+
+
+----------------------------------------
+/var/log/nginx/access.log
+----------------------------------------
+115.136.211.71 - - [16/Aug/2023:07:28:08 +0000] "GET / HTTP/1.1" 502 552 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" "-"
+115.136.211.71 - - [16/Aug/2023:07:28:08 +0000] "GET /favicon.ico HTTP/1.1" 502 552 "http://teserapp5-env.eba-b4mcizwm.ap-northeast-2.elasticbeanstalk.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" "-"
+115.136.211.71 - - [16/Aug/2023:07:28:16 +0000] "GET / HTTP/1.1" 502 552 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" "-"
+115.136.211.71 - - [16/Aug/2023:07:28:16 +0000] "GET /favicon.ico HTTP/1.1" 502 552 "http://teserapp5-env.eba-b4mcizwm.ap-northeast-2.elasticbeanstalk.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" "-"
+115.136.211.71 - - [16/Aug/2023:07:28:19 +0000] "GET / HTTP/1.1" 502 552 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" "-"
+115.136.211.71 - - [16/Aug/2023:07:28:19 +0000] "GET /favicon.ico HTTP/1.1" 502 552 "http://teserapp5-env.eba-b4mcizwm.ap-northeast-2.elasticbeanstalk.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36" "-"
+
+
+----------------------------------------
+/var/log/nginx/error.log
+----------------------------------------
+2023/08/16 07:28:08 [error] 3092#3092: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 115.136.211.71, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "teserapp5-env.eba-b4mcizwm.ap-northeast-2.elasticbeanstalk.com"
+2023/08/16 07:28:08 [error] 3092#3092: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 115.136.211.71, server: , request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:5000/favicon.ico", host: "teserapp5-env.eba-b4mcizwm.ap-northeast-2.elasticbeanstalk.com", referrer: "http://teserapp5-env.eba-b4mcizwm.ap-northeast-2.elasticbeanstalk.com/"
+2023/08/16 07:28:16 [error] 3092#3092: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 115.136.211.71, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "teserapp5-env.eba-b4mcizwm.ap-northeast-2.elasticbeanstalk.com"
+2023/08/16 07:28:16 [error] 3092#3092: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 115.136.211.71, server: , request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:5000/favicon.ico", host: "teserapp5-env.eba-b4mcizwm.ap-northeast-2.elasticbeanstalk.com", referrer: "http://teserapp5-env.eba-b4mcizwm.ap-northeast-2.elasticbeanstalk.com/"
+2023/08/16 07:28:19 [error] 3092#3092: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 115.136.211.71, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:5000/", host: "teserapp5-env.eba-b4mcizwm.ap-northeast-2.elasticbeanstalk.com"
+2023/08/16 07:28:19 [error] 3092#3092: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 115.136.211.71, server: , request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:5000/favicon.ico", host: "teserapp5-env.eba-b4mcizwm.ap-northeast-2.elasticbeanstalk.com", referrer: "http://teserapp5-env.eba-b4mcizwm.ap-northeast-2.elasticbeanstalk.com/"
+
